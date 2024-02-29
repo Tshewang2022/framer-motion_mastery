@@ -26,6 +26,31 @@ export const navLinks = [
 
 export const footerLinks = [
   {
-    title: "",
+    title: "Featured",
+    links: [
+      { name: "Home" },
+      { name: "Become a host" },
+      { name: "Pricing" },
+      { name: "Blog" },
+      { name: "Contact" },
+    ],
+  },
+  {
+    title: "Featured",
+    links: [
+      { name: "About Us" },
+      { name: "Press" },
+      { name: "Contact" },
+      { name: "Careers" },
+      { name: "Blog" },
+    ],
+  },
+  {
+    title: "Team and policies",
+    links: [
+      { name: "Terms of services" },
+      { name: "Privacy Policy" },
+      { name: "Security" },
+    ],
   },
 ];
