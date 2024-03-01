@@ -1,7 +1,7 @@
 import { navLinks } from "../constants";
 const Navbar = () => {
   return (
-    <nav className="full text-center px-[128px] py-[40px] bg-slate-200">
+    <nav className="full text-center px-[128px] py-[40px]">
       <div className="flex justify-between items-center">
         <div>
           <img src="logo" alt="logo" />

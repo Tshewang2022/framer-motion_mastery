@@ -4,7 +4,10 @@ const Footer = () => {
     <footer className="w-fulll py-[64px]">
       <div className="">
         <ul className="flex justify-between items-center">
-          <div>about the company</div>
+          <div>
+            <p>joie</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
           {footerLinks.map((section) => (
             <div>
               <h4 className="text-[24px] font-rototo font-semibold leading-[120%]">

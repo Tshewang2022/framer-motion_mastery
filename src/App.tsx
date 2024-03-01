@@ -1,4 +1,4 @@
-import { Home, Rent, Properties, ContactUs } from "./_roots/pages";
+import { Home, Rent, Properties, ContactUs, Parallax } from "./_roots/pages";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
@@ -7,8 +7,10 @@ const App = () => {
     <div>
       <Navbar />
       <Home />
+
       <Properties />
       <Rent />
+      <Parallax />
       <ContactUs />
       <Footer />
     </div>

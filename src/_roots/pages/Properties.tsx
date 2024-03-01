@@ -1,9 +1,24 @@
 import { IoHomeOutline } from "react-icons/io5";
+import { motion, useScroll } from "framer-motion";
+import { useRef } from "react";
 
+const sliderVarients = {
+  initials: {
+    x: 0,
+  },
+  animate: {
+    x: 200,
+    transition: {
+      repeat: Infinity,
+      repeatType: "mirror",
+      duration: 10,
+    },
+  },
+};
 const Properties = () => {
   return (
     <>
-      <div className="w-full">
+      <div className="w-full ">
         <div className="text-center mb-[32px]">
           <h2 className="text-[32px] text-black font-roboto font-semibold ">
             Property by Area
@@ -16,7 +31,7 @@ const Properties = () => {
         <div className="mb-[64px]">
           <div className="flex items-center justify-center gap-[24px] pb-[24px]">
             <div
-              className="w-[416px] h-[242px] p-[16px] rounded-[4px]"
+              className="w-[416px] h-[242px] p-[16px] rounded-[4px] bg-cover bg-no-repeat bg-center"
               style={{ backgroundImage: `url('/assets/images/sunshine.jpg')` }}
             >
               <h4 className="text-white text-[24px] font-sans font-semibold">
@@ -25,7 +40,7 @@ const Properties = () => {
               <p className="text-white">listing for lease</p>
             </div>
             <div
-              className="w-[416px] h-[242px] p-[16px] rounded-[4px]"
+              className="w-[416px] h-[242px] p-[16px] rounded-[4px] bg-cover bg-no-repeat bg-center"
               style={{ backgroundImage: `url('/assets/images/sunshine.jpg')` }}
             >
               <h4 className="text-white text-[24px] font-sans font-semibold">
@@ -34,7 +49,7 @@ const Properties = () => {
               <p className="text-white">listing for lease</p>
             </div>
             <div
-              className="w-[416px] h-[242px] p-[16px] rounded-md"
+              className="w-[416px] h-[242px] p-[16px] rounded-md bg-cover bg-no-repeat bg-center"
               style={{ backgroundImage: `url('/assets/images/sunshine.jpg')` }}
             >
               <h4 className="text-white text-[24px] font-sans font-semibold">
@@ -45,7 +60,7 @@ const Properties = () => {
           </div>
           <div className="flex justify-center items-center gap-[24px]">
             <div
-              className="w-[638px] h-[214px] bg-slate-200 p-[16px] rounded-[4px]"
+              className="w-[638px] h-[214px] bg-slate-200 p-[16px] rounded-[4px] bg-cover bg-no-repeat bg-center"
               style={{ backgroundImage: `url('/assets/images/sunshine.jpg')` }}
             >
               <h4 className="text-white text-[24px] font-sans font-semibold">
@@ -54,7 +69,7 @@ const Properties = () => {
               <p className="text-white">listing for lease</p>
             </div>
             <div
-              className="w-[638px] h-[214px] bg-slate-200 p-[16px] rounded-md"
+              className="w-[638px] h-[214px] bg-slate-200 p-[16px] rounded-md bg-cover bg-no-repeat bg-center"
               style={{ backgroundImage: `url('/assets/images/sunshine.jpg')` }}
             >
               <h4 className="text-white text-[24px] font-sans font-semibold">
@@ -65,7 +80,7 @@ const Properties = () => {
           </div>
         </div>
       </div>
-      <div className="w-full bg-slate-200 py-[32px]">
+      <div className="w-full bg-slate-200 py-[32px]  from-blue-600 to-purple-600 bg-gradient-to-b">
         <div className="text-center mb-[32px]">
           <h2 className="text-[32px] text-black font-roboto font-semibold ">
             Property by Area
@@ -113,6 +128,12 @@ const Properties = () => {
               </p>
               <h4 className="text-[16px] my-[32px]"> Read more</h4>
             </div>
+          </div>
+          <div>
+            <h2 className="text-[50px] ">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit,
+              voluptates.
+            </h2>
           </div>
         </div>
       </div>

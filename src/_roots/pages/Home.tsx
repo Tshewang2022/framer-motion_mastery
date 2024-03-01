@@ -1,17 +1,37 @@
+import { motion } from "framer-motion";
+export const textVarient = {
+  initials: {
+    x: -1500,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+};
 const Home = () => {
   return (
     <div
-      className="w-full h-[667px] mb-[64px]"
+      className="w-full h-[667px] mb-[64px] "
       style={{ backgroundImage: `url("/assets/images/6620476.jpg")` }}
     >
-      <div className=" pt-[96px]">
+      <motion.div
+        variants={textVarient}
+        initial="initials"
+        animate="animate"
+        className=" pt-[96px]"
+      >
         <h2 className="text-center font-roboto text-[32px] font-medium text-black">
           Find Your Dreams
         </h2>
         <p className="text-center font-sans text-[14.5px] text-[#717171] mt-[16px]">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, quae?
         </p>
-      </div>
+      </motion.div>
       <div className="mt-[120px] ">
         <div className="flex justify-center items-center gap-[32px]">
           <button className="text-[16px] text-white font-normal leading-normal px-[24px] py-[12px] rounded-md font-roboto bg-[#4A60A1]">
