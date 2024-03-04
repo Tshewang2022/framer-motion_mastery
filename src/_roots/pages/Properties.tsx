@@ -1,5 +1,5 @@
 import { IoHomeOutline } from "react-icons/io5";
-import { motion, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import { useRef } from "react";
 
 const sliderVarients = {
@@ -92,7 +92,7 @@ const Properties = () => {
         </div>
         <div className="mt-[32px]">
           <div className="flex justify-center items-center gap-[64px]">
-            <div className="w-[320px] h-[290px] border-2 p-[16px] bg-white rounded-md shadow-md">
+            <motion.div whileHover={{backgroundColor: 'lightblue'}} className="w-[320px] h-[290px] border-2 p-[16px] bg-white rounded-md shadow-md">
               <IoHomeOutline className="w-[48px] h-[48px] bg-white" />
               <h2 className="text-[24px] font-semibold text-[#363A3D] font-roboto leading-[150%] my-[16px]">
                 Sale your home
@@ -103,7 +103,7 @@ const Properties = () => {
                 aliquid iusto.
               </p>
               <h4 className="text-[16px] my-[32px]"> Read more</h4>
-            </div>
+            </motion.div>
             <div className="w-[320px] h-[290px] border-2 border-gray-300 p-[16px] bg-white shadow-md rounded-md">
               <IoHomeOutline className="w-[48px] h-[48px]" />
               <h2 className="text-[24px] font-semibold text-[#363A3D] font-roboto leading-[150%] my-[16px]">
