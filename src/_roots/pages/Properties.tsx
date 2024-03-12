@@ -1,6 +1,7 @@
+//"use client";
 import { IoHomeOutline } from "react-icons/io5";
-import { motion } from "framer-motion";
-// import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 const sliderVarients = {
   initials: {
@@ -16,6 +17,12 @@ const sliderVarients = {
   },
 };
 const Properties = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "0.33 1"],
+  });
+  const scallprogress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   return (
     <>
       <div className="w-full ">
@@ -28,7 +35,11 @@ const Properties = () => {
             sint!lorem10
           </p>
         </div>
-        <div className="mb-[64px]">
+        <motion.div
+          ref={ref}
+          className="mb-[64px]"
+          style={{ scale: scallprogress, opacity: scrollYProgress }}
+        >
           <div className="flex items-center justify-center gap-[24px] pb-[24px]">
             <div
               className="w-[416px] h-[242px] p-[16px] rounded-[4px] bg-cover bg-no-repeat bg-center"
@@ -78,9 +89,13 @@ const Properties = () => {
               <p className="text-white">listing for lease</p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
-      <div className="w-full bg-slate-200 py-[32px]  from-blue-600 to-purple-600 bg-gradient-to-b">
+      <motion.div
+        ref={ref}
+        style={{ scale: scrollYProgress, opacity: scrollYProgress }}
+        className="w-full bg-slate-200 py-[32px]  from-blue-600 to-purple-600 bg-gradient-to-b"
+      >
         <div className="text-center mb-[32px]">
           <h2 className="text-[32px] text-black font-roboto font-semibold ">
             Property by Area
@@ -139,7 +154,7 @@ const Properties = () => {
             </h2>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
